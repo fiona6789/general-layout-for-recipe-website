@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\Documents\\Coding crash courses"
+		},
+		{
+			"path": "..\\..\\Documents\\blue-grid-method-course"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502,
+		"liveServer.settings.multiRootWorkspaceName": "general layout for recipe website"
+	}
+}

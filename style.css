@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family:sans-serif;
+    font-size: 16px;
+    height:100vh;
+
+    font-family: "Arial",serif;
+    overflow-x: hidden;
+
+    display:grid;
+    grid-template-areas: 
+    'nav nav nav'
+    'topics topics topics'
+    'season season generate-meals'
+    'recipes recipes recipes'
+    'footer footer footer';
+
+    grid-template-rows: 100px 150px 125px 500px 200px;
+    grid-template-columns: 1fr 1.fr 1fr;
+}
+
+.topics,
+.season,
+.generate-meals,
+.recipes,
+footer{
+    background:steelblue;
+    color:#fff;
+    padding:20px;
+    border:skyblue 1px solid;
+}
+
+nav{
+    grid-area:nav;
+}
+
+.topics{
+    grid-area:topics;
+}
+.season{
+    grid-area:season
+}
+.generate-meals{
+    grid-area:generate-meals
+}
+.recipes{
+    grid-area: recipes;
+}
+footer{
+    grid-area: footer;
+}
+
+.navbar{
+    background-color: #79aa8f;
+    overflow:hidden;
+    height: 63px;
+
+    z-index: 1;
+
+    padding: 5px;
+}
+
+.navbar .open-slide a i {
+    padding-top: 18px;
+}
+.navbar a{
+    float:left;
+    display:block;
+    color:#f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.navbar ul{
+    margin: 8px 0 0 0;
+    list-style: none;
+}
+
+
+.navbar a:hover{
+    color:#bde2ce;
+    
+} 
+
+.side-nav{
+    height:100%;
+    width:0;
+
+    position:fixed;
+    z-index: 1;
+    top: 63px;
+    left:0;
+    background-color: rgb(21, 21, 161);
+    opacity: 0.9;
+    overflow-x:hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display:block;
+    transition:0.3s;
+}
+.side-nav a:hover{
+    color:#fff;
+}
+
+.side-nav .btn-close{
+    position:absolute;
+    top:0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+
+}
+
+#main{
+    transition:margin-left 0.5s;
+    padding:20px;
+    overflow:hidden;
+    width: 100%;
+}
+
+@media(max-width:560px){
+    .navbar-nav{
+        display: none;
+    }
+}
